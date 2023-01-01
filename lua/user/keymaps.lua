@@ -27,6 +27,7 @@ keymap("n", "<C-l>", "<C-w>l", opts)
 
 keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 keymap("n", "<leader>s", ":ls<cr>", opts)
+keymap("n", "<leader>n", ":setlocal relativenumber!<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
