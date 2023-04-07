@@ -1,22 +1,22 @@
-local colorscheme = "gruvbox"
+local colorscheme = "gruvbox-baby"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+local status_ok, _ = pcall( vim.cmd, "colorscheme " .. colorscheme )
 if status_ok then
   return
 end
-vim.notify("colorscheme " .. colorscheme .. " not found!")
 
-local colorscheme = "desert"
+vim.notify( "colorscheme " .. colorscheme .. " not found!" )
+colorscheme = "desert"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+status_ok, _ = pcall( vim.cmd, "colorscheme " .. colorscheme )
 if status_ok then
   return
 end
-vim.notify("colorscheme " .. colorscheme .. " not found!")
 
-local colorscheme = "default"
+vim.notify( "colorscheme " .. colorscheme .. " not found!" )
+colorscheme = "default"
 
-local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+status_ok, _ = pcall( vim.cmd, "colorscheme " .. colorscheme )
 if status_ok then
   return
 end

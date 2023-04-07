@@ -4,13 +4,13 @@
 -- vim.opt.arabic                                               -- for Arabic as a default second language
 -- vim.opt.arabicshape                                          -- 'arshape' do shaping for Arabic characters
 -- vim.opt.autochdir                                            -- change directory to the file in the current window
-   vim.opt.autoindent = true                                    -- take indent for new line from previous line
+vim.opt.autoindent = true -- take indent for new line from previous line
 -- vim.opt.autoread                                             -- autom. read file when changed outside of Vim
 -- vim.opt.autowrite                                            -- automatically write file if changed
 -- vim.opt.autowriteall                                         -- as 'autowrite', but works with more commands
-   vim.opt.background = "dark"                                  -- "dark" or "light", used for highlight colors
+vim.opt.background = "dark" -- "dark" or "light", used for highlight colors
 -- vim.opt.backspace                                            -- how backspace works at start of line
-   vim.opt.backup = false                                       -- keep backup file after overwriting a file
+vim.opt.backup = false      -- keep backup file after overwriting a file
 -- vim.opt.backupcopy                                           -- make backup as a copy, don't rename the file
 -- vim.opt.backupdir                                            -- list of directories for the backup file
 -- vim.opt.backupext                                            -- extension used for the backup file
@@ -35,8 +35,8 @@
 -- vim.opt.cinoptions                                           -- how to do indenting when 'cindent' is set
 -- vim.opt.cinscopedecls                                        -- words that are recognized by 'cino-g'
 -- vim.opt.cinwords                                             -- words where 'si' and 'cin' add an indent
-   vim.opt.clipboard = "unnamedplus"                            -- use the clipboard as the unnamed register
-   vim.opt.cmdheight = 2                                        -- number of lines to use for the command-line
+vim.opt.clipboard = "unnamedplus" -- use the clipboard as the unnamed register
+vim.opt.cmdheight = 2             -- number of lines to use for the command-line
 -- vim.opt.cmdwinheight                                         -- height of the command-line window
 -- vim.opt.colorcolumn                                          -- columns to highlight
 -- vim.opt.columns                                              -- number of columns in the display
@@ -44,10 +44,10 @@
 -- vim.opt.commentstring                                        -- template for comments; used for fold marker
 -- vim.opt.complete                                             -- specify how Insert mode completion works
 -- vim.opt.completefunc                                         -- function to be used for Insert mode completion
-   vim.opt.completeopt = { "menuone", "noselect" }              -- options for Insert mode completion
+vim.opt.completeopt = { "menuone", "noselect" } -- options for Insert mode completion
 -- vim.opt.completeslash                                        -- like 'shellslash' for completion
 -- vim.opt.concealcursor                                        -- whether concealable text is hidden in cursor line
-   vim.opt.conceallevel = 0                                     -- whether concealable text is shown or hidden
+vim.opt.conceallevel = 0 -- whether concealable text is shown or hidden
 -- vim.opt.confirm                                              -- ask what to do about unsaved/read-only files
 -- vim.opt.copyindent                                           -- make 'autoindent' use existing indent structure
 -- vim.opt.cpoptions                                            -- flags for Vi-compatible behavior
@@ -59,7 +59,7 @@
 -- vim.opt.cscopetagorder                                       -- determines ":cstag" search order
 -- vim.opt.cursorbind                                           -- move cursor in window as it moves in other windows
 -- vim.opt.cursorcolumn                                         -- highlight the screen column of the cursor
-   vim.opt.cursorline = true                                    -- highlight the screen line of the cursor
+vim.opt.cursorline = true -- highlight the screen line of the cursor
 -- vim.opt.cursorlineopt                                        -- settings for 'cursorline'
 -- vim.opt.debug                                                -- set to "msg" to see all error messages
 -- vim.opt.define                                               -- pattern to be used to find a macro definition
@@ -80,9 +80,9 @@
 -- vim.opt.errorfile                                            -- name of the errorfile for the QuickFix mode
 -- vim.opt.errorformat                                          -- description of the lines in the error file
 -- vim.opt.eventignore                                          -- autocommand events that are ignored
-   vim.opt.expandtab = true                                     -- use spaces when <Tab> is inserted
+vim.opt.expandtab = true       -- use spaces when <Tab> is inserted
 -- vim.opt.exrc                                                 -- read .nvimrc and .exrc in the current directory
-   vim.opt.fileencoding = "utf-8"                               -- file encoding for multibyte text
+vim.opt.fileencoding = "utf-8" -- file encoding for multibyte text
 -- vim.opt.fileencodings                                        -- automatically detected character encodings
 -- vim.opt.fileformat                                           -- file format used for file I/O
 -- vim.opt.fileformats                                          -- automatically detected values for 'fileformat'
@@ -105,17 +105,14 @@
 -- vim.opt.foldtext                                             -- expression used to display for a closed fold
 -- vim.opt.formatexpr                                           -- expression used with "gq" command
 -- vim.opt.formatlistpat                                        -- pattern used to recognize a list header
--- vim.opt.formatoptions:remove "c" -- TODO: this doesn't seem to work -- how automatic formatting is to be done
--- vim.cmd [[set formatoptions-=c]] -- TODO: this doesn't seem to work
--- vim.cmd [[set formatoptions-=r]] -- TODO: this doesn't seem to work
--- vim.cmd [[set formatoptions-=o]] -- TODO: this doesn't seem to work
+vim.opt.formatoptions:remove( { "c", "r", "o" } ) -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 -- vim.opt.formatprg                                            -- name of external program used with "gq" command
 -- vim.opt.fsync                                                -- whether to invoke fsync() after file write
 -- vim.opt.gdefault                                             -- the ":substitute" flag 'g' is default on
 -- vim.opt.grepformat                                           -- format of 'grepprg' output
 -- vim.opt.grepprg                                              -- program to use for ":grep"
 -- vim.opt.guicursor                                            -- GUI: settings for cursor shape and blinking
-   vim.opt.guifont = "monospace:h17"                            -- GUI: Name(s) of font(s) to be used
+vim.opt.guifont = "monospace:h17" -- GUI: Name(s) of font(s) to be used
 -- vim.opt.guifontwide                                          -- list of font names for double-wide characters
 -- vim.opt.guioptions                                           -- GUI: Which components and options are used
 -- vim.opt.guitablabel                                          -- GUI: custom label for a tab page
@@ -127,10 +124,10 @@
 -- vim.opt.history                                              -- number of command-lines that are remembered
 -- vim.opt.hkmap                                                -- Hebrew keyboard mapping
 -- vim.opt.hkmapp                                               -- phonetic Hebrew keyboard mapping
-   vim.opt.hlsearch = true                                      -- highlight matches with last search pattern
+vim.opt.hlsearch = true -- highlight matches with last search pattern
 -- vim.opt.icon                                                 -- let Vim set the text of the window icon
 -- vim.opt.iconstring                                           -- string to use for the Vim icon text
-   vim.opt.ignorecase = true                                    -- ignore case in search patterns
+vim.opt.ignorecase = true -- ignore case in search patterns
 -- vim.opt.imcmdline                                            -- use IM when starting to edit a command line
 -- vim.opt.imdisable                                            -- do not use the IM in any mode
 -- vim.opt.iminsert                                             -- use :lmap or IM in Insert mode
@@ -143,7 +140,7 @@
 -- vim.opt.infercase                                            -- adjust case of match for keyword completion
 -- vim.opt.isfname                                              -- characters included in file names and pathnames
 -- vim.opt.isident                                              -- characters included in identifiers
-   vim.opt.iskeyword:append "-"                                 -- characters included in keywords
+vim.opt.iskeyword:append( "-" ) -- characters included in keywords
 -- vim.opt.isprint                                              -- printable characters
 -- vim.opt.joinspaces                                           -- two spaces after a period with a join command
 -- vim.opt.jumpoptions                                          -- specifies how jumping is done
@@ -160,9 +157,9 @@
 -- vim.opt.linespace                                            -- number of pixel lines to use between characters
 -- vim.opt.lisp                                                 -- automatic indenting for Lisp
 -- vim.opt.lispwords                                            -- words that change how lisp indenting works
-   vim.opt.list = true                                          -- show <Tab> and <EOL>
-   vim.opt.listchars = { eol = "¬", tab = ">·", trail = "~", extends = ">", precedes = "<", space = "·" }
-                                                                -- characters for displaying in list mode
+vim.opt.list = true -- show <Tab> and <EOL>
+vim.opt.listchars = { eol = "¬", tab = ">·", trail = "~", extends = ">", precedes = "<", space = "·" }
+-- characters for displaying in list mode
 -- vim.opt.loadplugins                                          -- load plugin scripts when starting up
 -- vim.opt.magic                                                -- changes special characters in search patterns
 -- vim.opt.makeef                                               -- name of the errorfile for ":make"
@@ -182,7 +179,7 @@
 -- vim.opt.modifiable                                           -- changes to the text are not possible
 -- vim.opt.modified                                             -- buffer has been modified
 -- vim.opt.more                                                 -- pause listings when the whole screen is filled
-   vim.opt.mouse = "a"                                          -- enable the use of mouse clicks
+vim.opt.mouse = "a" -- enable the use of mouse clicks
 -- vim.opt.mousefocus                                           -- keyboard focus follows the mouse
 -- vim.opt.mousehide                                            -- hide mouse pointer while typing
 -- vim.opt.mousemodel                                           -- changes meaning of mouse buttons
@@ -190,8 +187,8 @@
 -- vim.opt.mouseshape                                           -- shape of the mouse pointer in different modes
 -- vim.opt.mousetime                                            -- max time between mouse double-click
 -- vim.opt.nrformats                                            -- number formats recognized for CTRL-A command
-   vim.opt.number = true                                        -- print the line number in front of each line
-   vim.opt.numberwidth = 4                                      -- number of columns used for the line number
+vim.opt.number = true   -- print the line number in front of each line
+vim.opt.numberwidth = 4 -- number of columns used for the line number
 -- vim.opt.omnifunc                                             -- function for filetype-specific completion
 -- vim.opt.opendevice                                           -- allow reading/writing devices on MS-Windows
 -- vim.opt.operatorfunc                                         -- function to be called for |g@| operator
@@ -214,14 +211,14 @@
 -- vim.opt.printmbcharset                                       -- CJK character set to be used for :hardcopy
 -- vim.opt.printmbfont                                          -- font names to be used for CJK output of :hardcopy
 -- vim.opt.printoptions                                         -- controls the format of :hardcopy output
-   vim.opt.pumheight = 10                                       -- maximum height of the popup menu
+vim.opt.pumheight = 10 -- maximum height of the popup menu
 -- vim.opt.pumwidth                                             -- minimum width of the popup menu
 -- vim.opt.pyxversion                                           -- Python version used for pyx* commands
 -- vim.opt.quoteescape                                          -- escape characters used in a string
 -- vim.opt.readonly                                             -- disallow writing the buffer
 -- vim.opt.redrawtime                                           -- timeout for 'hlsearch' and |:match| highlighting
 -- vim.opt.regexpengine                                                     regexp engine to use
-   vim.opt.relativenumber = false                               -- show relative line number in front of each line
+vim.opt.relativenumber = false -- show relative line number in front of each line
 -- vim.opt.report                                               -- threshold for reporting nr. of lines changed
 -- vim.opt.revins                                               -- inserting characters will work backwards
 -- vim.opt.rightleft                                            -- window is right-to-left oriented
@@ -232,7 +229,7 @@
 -- vim.opt.scroll                                               -- lines to scroll with CTRL-U and CTRL-D
 -- vim.opt.scrollbind                                           -- scroll in window as other windows scroll
 -- vim.opt.scrolljump                                           -- minimum number of lines to scroll
-   vim.opt.scrolloff = 8                                        -- minimum nr. of lines above and below cursor
+vim.opt.scrolloff = 8 -- minimum nr. of lines above and below cursor
 -- vim.opt.scrollopt                                            -- how 'scrollbind' should behave
 -- vim.opt.sections                                             -- nroff macros that separate sections
 -- vim.opt.secure                                               -- secure mode for reading .vimrc in current dir
@@ -250,19 +247,19 @@
 -- vim.opt.shellxescape                                         -- characters to escape when 'shellxquote' is (
 -- vim.opt.shellxquote                                          -- like 'shellquote', but include redirection
 -- vim.opt.shiftround                                           -- round indent to multiple of shiftwidthk
-   vim.opt.shiftwidth = 2                                       -- number of spaces to use for (auto)indent step
-   vim.opt.shortmess:append "c"                                 -- list of flags, reduce length of messages
+vim.opt.shiftwidth = 2          -- number of spaces to use for (auto)indent step
+vim.opt.shortmess:append( "c" ) -- list of flags, reduce length of messages
 -- vim.opt.showbreak                                            -- string to use at the start of wrapped lines
 -- vim.opt.showcmd                                              -- show (partial) command in status line
 -- vim.opt.showfulltag                                          -- show full tag pattern when completing tag
 -- vim.opt.showmatch                                            -- briefly jump to matching bracket if insert one
-   vim.opt.showmode = true                                      -- message on status line to show current mode
-   vim.opt.showtabline = 2                                      -- tells when the tab pages line is displayed
+vim.opt.showmode = true    -- message on status line to show current mode
+vim.opt.showtabline = 2    -- tells when the tab pages line is displayed
 -- vim.opt.sidescroll                                           -- minimum number of columns to scroll horizontal
-   vim.opt.sidescrolloff = 8                                    -- min. nr. of columns to left and right of cursor
-   vim.opt.signcolumn = "yes"                                   -- when and how to display the sign column
-   vim.opt.smartcase = true                                     -- no ignore case when pattern has uppercase
-   vim.opt.smartindent = true                                   -- smart autoindenting for C programs
+vim.opt.sidescrolloff = 8  -- min. nr. of columns to left and right of cursor
+vim.opt.signcolumn = "yes" -- when and how to display the sign column
+vim.opt.smartcase = true   -- no ignore case when pattern has uppercase
+vim.opt.smartindent = true -- smart autoindenting for C programs
 -- vim.opt.smarttab                                             -- use 'shiftwidth' when inserting <Tab>
 -- vim.opt.softtabstop                                          -- number of spaces that <Tab> uses while editing
 -- vim.opt.spell                                                -- enable spell checking
@@ -271,19 +268,19 @@
 -- vim.opt.spelllang                                            -- language(s) to do spell checking for
 -- vim.opt.spelloptions                                         -- options for spell checking
 -- vim.opt.spellsuggest                                         -- method(s) used to suggest spelling corrections
-   vim.opt.splitbelow = true                                    -- new window from split is below the current one
-   vim.opt.splitright = true                                    -- new window is put right of the current one
+vim.opt.splitbelow = true -- new window from split is below the current one
+vim.opt.splitright = true -- new window is put right of the current one
 -- vim.opt.startofline                                          -- commands move cursor to first non-blank in line
 -- vim.opt.statusline                                           -- custom format for the status line
 -- vim.opt.suffixes                                             -- suffixes that are ignored with multiple match
 -- vim.opt.suffixesadd                                          -- suffixes added when searching for a file
-   vim.opt.swapfile = false                                     -- whether to use a swapfile for a buffer
+vim.opt.swapfile = false -- whether to use a swapfile for a buffer
 -- vim.opt.switchbuf                                            -- sets behavior when switching to another buffer
 -- vim.opt.synmaxcol                                            -- maximum column to find syntax items
 -- vim.opt.syntax                                               -- syntax to be loaded for current buffer
 -- vim.opt.tabline                                              -- custom format for the console tab pages line
 -- vim.opt.tabpagemax                                           -- maximum number of tab pages for |-p| and "tab all"
-   vim.opt.tabstop = 2                                          -- number of spaces that <Tab> in file uses
+vim.opt.tabstop = 2 -- number of spaces that <Tab> in file uses
 -- vim.opt.tagbsearch                                           -- use binary searching in tags files
 -- vim.opt.tagcase                                              -- how to handle case when searching in tags files
 -- vim.opt.taglength                                            -- number of significant characters for a tag
@@ -292,13 +289,13 @@
 -- vim.opt.tagstack                                             -- push tags onto the tag stack
 -- vim.opt.term                                                 -- name of the terminal
 -- vim.opt.termbidi                                             -- terminal takes care of bi-directionality
-   vim.opt.termguicolors = true                                 -- set term gui colors (most terminals support this)
+vim.opt.termguicolors = true -- set term gui colors (most terminals support this)
 -- vim.opt.textwidth                                            -- maximum width of text that is being inserted
 -- vim.opt.thesaurus                                            -- list of thesaurus files for keyword completion
 -- vim.opt.thesaurusfunc                                        -- function to be used for thesaurus completion
 -- vim.opt.tildeop                                              -- tilde command "~" behaves like an operator
 -- vim.opt.timeout                                              -- time out on mappings and key codes
-   vim.opt.timeoutlen = 1000                                    -- time out time in milliseconds
+vim.opt.timeoutlen = 1000 -- time out time in milliseconds
 -- vim.opt.title                                                -- let Vim set the title of the window
 -- vim.opt.titlelen                                             -- percentage of 'columns' used for window title
 -- vim.opt.titleold                                             -- old title, restored when exiting
@@ -307,11 +304,11 @@
 -- vim.opt.ttimeoutlen                                          -- time out time for key codes in milliseconds
 -- vim.opt.ttytype                                              -- alias for 'term'
 -- vim.opt.undodir                                              -- where to store undo files
-   vim.opt.undofile = true                                      -- save undo information in a file
+vim.opt.undofile = true -- save undo information in a file
 -- vim.opt.undolevels                                           -- maximum number of changes that can be undone
 -- vim.opt.undoreload                                           -- max nr of lines to save for undo on a buffer reload
 -- vim.opt.updatecount                                          -- after this many characters flush swap file
-   vim.opt.updatetime = 300                                     -- after this many milliseconds flush swap file
+vim.opt.updatetime = 300 -- after this many milliseconds flush swap file
 -- vim.opt.varsofttabstop                                       -- a list of number of spaces when typing <Tab>
 -- vim.opt.vartabstop                                           -- a list of number of spaces for <Tab>s
 -- vim.opt.verbose                                              -- give informative messages
@@ -321,7 +318,7 @@
 -- vim.opt.virtualedit                                          -- when to use virtual editing
 -- vim.opt.visualbell                                           -- use visual bell instead of beeping
 -- vim.opt.warn                                                 -- warn for shell command when buffer was changed
-   vim.opt.whichwrap:append "<,>,[,],h,l"                       -- allow specified keys to cross line boundaries
+vim.opt.whichwrap:append( "<>[]hl" ) -- allow specified keys to cross line boundaries
 -- vim.opt.wildchar                                             -- command-line character for wildcard expansion
 -- vim.opt.wildcharm                                            -- like 'wildchar' but also works when mapped
 -- vim.opt.wildignore                                           -- files matching these patterns are not completed
@@ -338,10 +335,10 @@
 -- vim.opt.winminheight                                         -- minimum number of lines for any window
 -- vim.opt.winminwidth                                          -- minimal number of columns for any window
 -- vim.opt.winwidth                                             -- minimal number of columns for current window
-   vim.opt.wrap = true                                          -- long lines wrap and continue on the next line
+vim.opt.wrap = true -- long lines wrap and continue on the next line
 -- vim.opt.wrapmargin                                           -- chars from the right where wrapping starts
 -- vim.opt.wrapscan                                             -- searches wrap around the end of the file
 -- vim.opt.write                                                -- writing to a file is allowed
 -- vim.opt.writeany                                             -- write to file with no need for "!" override
-   vim.opt.writebackup = false                                  -- make a backup before overwriting a file
+vim.opt.writebackup = false -- make a backup before overwriting a file
 -- vim.opt.writedelay                                           -- delay this many msec for each char (for debug)
