@@ -23,10 +23,11 @@ keymap( "n", "<C-h>", "<C-w>h", opts )
 keymap( "n", "<C-j>", "<C-w>j", opts )
 keymap( "n", "<C-k>", "<C-w>k", opts )
 keymap( "n", "<C-l>", "<C-w>l", opts )
+-- Custom commands
 keymap( "n", "<leader>e", ":NvimTreeToggle<cr>", opts )
 keymap( "n", "<leader>s", ":ls<cr>", opts )
 keymap( "n", "<leader>n", ":setlocal relativenumber!<cr>", opts )
-keymap( "n", "<leader>f", ":lua vim.lsp.buf.format()<cr>", opts )
+keymap( "n", "<leader>g", ":lua vim.lsp.buf.format()<cr>", opts )
 -- Resize with arrows
 keymap( "n", "<C-Up>", ":resize -2<CR>", opts )
 keymap( "n", "<C-Down>", ":resize +2<CR>", opts )
