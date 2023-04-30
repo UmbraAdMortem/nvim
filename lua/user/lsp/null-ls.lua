@@ -11,6 +11,10 @@ local diagnostics = null_ls.builtins.diagnostics
 null_ls.setup( {
   debug = false,
   sources = {
+    formatting.shfmt,
+    diagnostics.shellcheck,
+    formatting.yapf,
+    diagnostics.pylint,
     -- formatting.stylua,
     -- diagnostics.selene,
   },
